@@ -1,0 +1,6 @@
+nano .gitignore
+# Python
+__pycache__/
+*.pyc
+venv/
+*.db

@@ -6,6 +6,7 @@ from routers import provisioning, consumption
 
 # ✅ Import Base and engine only
 from database.db import Base, engine
+from routers import auth
 
 app = FastAPI()
 
@@ -21,6 +22,7 @@ app.add_middleware(
 # ✅ Include your routers
 app.include_router(provisioning.router)
 app.include_router(consumption.router)
+app.include_router(auth.router)
 
 # ✅ Create tables from your SQLAlchemy models
 Base.metadata.create_all(bind=engine)

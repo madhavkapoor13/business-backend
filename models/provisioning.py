@@ -12,7 +12,7 @@ class Provision(Base):
     item_id = Column(Integer, ForeignKey("item.item_id"))
     quantity = Column(Integer)
     approx_price = Column(Float)
-    remarks = Column(String)
-    is_special_provisioning = Column(Boolean)  # ✅ fix name
-    is_budget_frozen = Column(Boolean)         # ✅ fix name
-    created_by = Column(String)
+    remarks = Column(String(500)) # Added a suitable length for remarks
+    is_special_provisioning = Column(Boolean)
+    is_budget_frozen = Column(Boolean)
+    created_by = Column(String(255)) # Added a suitable length for created_by

@@ -9,7 +9,7 @@ class UserOut(BaseModel):
     username: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True # Changed from orm_mode = True
 
 class Token(BaseModel):
     access_token: str

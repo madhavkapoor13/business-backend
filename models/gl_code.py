@@ -4,5 +4,5 @@ from database.db import Base
 class GLCode(Base):
     __tablename__ = "gl_code"
     gl_code_id = Column(Integer, primary_key=True, index=True)
-    gl_code = Column(String, nullable=False)
-    description = Column(String)
+    gl_code = Column(String(50), nullable=False)
+    description = Column(String(255))
